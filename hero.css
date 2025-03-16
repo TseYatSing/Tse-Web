@@ -1,0 +1,56 @@
+.hero {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* 全屏高度 */
+    background-image: url('../img/B.jpg'); /* 替换为你的图片路径 */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end; /* 使内容在垂直方向上对齐到底部 */
+    overflow: hidden;
+}
+ 
+.hero-content {
+    position: relative; /* 不再需要absolute定位，因为我们使用flex布局来定位它 */
+    text-align: left; /* 确保内容靠左对齐 */
+    width: 100%;
+    max-width: 800px;
+    padding: 1000px 50px; /* 减少了内边距以适应左对齐，但您可以根据需要调整 */
+    border-radius: 10px;
+    opacity: 0; /* 初始透明度为0 */
+    transform: translateY(50px); /* 初始位置在视口下方 */
+    animation: floatUp 1s ease-out forwards; /* 应用动画 */
+}
+
+@keyframes floatUp {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+ 
+.floating-title {
+    margin: 0;
+    font-size: 3em; /* 增加了字体大小 */
+    line-height: 1.2; /* 调整了行高，使文字看起来更高 */
+    color: #ffffff;
+}
+ 
+.floating {
+    margin: 0;
+    font-size: 1em; /* 增加了字体大小 */
+    line-height: 1.2; /* 调整了行高，使文字看起来更高 */
+    color: #ffffff;
+}
+
+.divider {
+    width: 100%;
+    height: 2px; /* 线条的高度 */
+    background-color: white; /* 线条的颜色 */
+    margin: 20px 0; /* 线条上下的外边距 */
+}
