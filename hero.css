@@ -16,7 +16,7 @@
     text-align: left; /* 确保内容靠左对齐 */
     width: 100%;
     max-width: 800px;
-    padding: 1000px 50px; /* 减少了内边距以适应左对齐，但您可以根据需要调整 */
+    padding: 200px 50px; /* 减少了内边距以适应左对齐，但您可以根据需要调整 */
     border-radius: 10px;
     opacity: 0; /* 初始透明度为0 */
     transform: translateY(50px); /* 初始位置在视口下方 */
