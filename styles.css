@@ -125,3 +125,16 @@ body {
 .card:hover .card-content h2 {
     color: #007BFF;
 }
+.contact-method {
+    margin: 1.5rem 0;
+    padding: 1rem;
+    background: #f8f9fa;
+    border-radius: 8px;
+}
+
+.qrcode {
+    width: 150px;
+    height: 150px;
+    margin: 0.5rem 0;
+    border: 2px solid #eee;
+}

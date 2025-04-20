@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/projects.css">
+    <title>TSE-51MCU</title>
+    <style>
+        /* 基础重置 */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+        }
+
+        /* 封面样式 - 修正背景语法 */
+        .cover {
+            height: 100vh;
+            background: 
+                linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), /* 修正渐变层 */
+                url('/img/projects_hardware/untitled.11.png') center/cover fixed; /* 正确背景简写 */
+            display: flex;
+            align-items: flex-end;
+            padding: 2rem;
+            color: white;
+            position: relative;
+        }
+
+        /* 返回按钮 */
+        .back-button {
+            position: absolute;
+            top: 2rem;
+            left: 2rem;
+            color: white;
+            text-decoration: none;
+            font-size: 1.5rem;
+            transition: transform 0.3s;
+            background: rgba(0,0,0,0.3);
+            padding: 0.5rem 1rem;
+            border-radius: 25px;
+        }
+
+        .back-button:hover {
+            transform: translateX(-5px);
+        }
+
+        /* 标题容器 */
+        .title-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* 内容区域 */
+        .content {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+            line-height: 1.6;
+            color: #24292e;
+        }
+
+        /* Markdown 风格 */
+        .md-style h1 {
+            border-bottom: 2px solid #eaecef;
+            padding-bottom: 0.3em;
+            margin: 1.5em 0 1em;
+        }
+
+        .md-style h2 {
+            margin: 1.3em 0 0.8em;
+        }
+
+        .md-style p {
+            margin-bottom: 1em;
+        }
+
+        .md-style pre {
+            background: #f6f8fa;
+            padding: 1em;
+            border-radius: 6px;
+            overflow-x: auto;
+            margin: 1.5em 0;
+        }
+
+        .md-style code {
+            font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+            background: rgba(27,31,35,0.05);
+            padding: 0.2em 0.4em;
+            border-radius: 3px;
+        }
+
+        /* 响应式设计 */
+        @media (max-width: 768px) {
+            .cover {
+                padding: 1rem;
+                height: 70vh;
+            }
+            
+            .back-button {
+                top: 1rem;
+                left: 1rem;
+                font-size: 1.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- 封面区域 -->
+    <header class="cover">
+        <a href="/html/projects/projects_hardware.html" class="back-button">← 返回目录</a>
+        <div class="title-container">
+            <h1>TSE-51MCU</h1>
+            <p>Version 1.0 | 最后更新: 2025-4-20</p>
+        </div>
+    </header>
+
+    <!-- 内容区域 -->
+    <main class="content md-style">
+        <h1>TSE-51MCU</h1>
+        
+        <h2>基于嘉立创EDA与Fusion设计的51单片机开发板</h2>
+        <p>元件说明：</p>
+        
+        <pre><code>左上开关为电源开关        右一LED接引脚P1.1
+                         右二LED接引脚P1.0
+左下为tpye-c供电         右三按钮接引脚P2.1
+                        右四按钮接引脚P2.0
+左下LED为电源指示灯         右五按钮接重置
+</code></pre>
+
+        <h2>元件</h2>
+        <ul>
+            <li>待写</li>
+        </ul>
+        <h2>打印件</h2>
+        <ul>
+            <li>底座 ×1</li>
+            <li>按钮 ×3</li>
+            <li>盖板 ×1</li>
+        </ul>
+        <h2>紧固件</h2>
+        <ul>
+            <li>螺丝 ×4</li>
+        </ul>
+
+    </main>
+    <!-- 在main标签结束后添加底部链接 -->
+    <div class="footer-links">
+        <div class="link-buttons">
+            <a href="https://oshwhub.com/tseyatsing" class="link-button" target="_blank">
+                <i class="fas fa-microchip jlc"></i>
+                嘉立创
+            </a>
+            <a href="https://makerworld.com/zh/@user_846587106" class="link-button" target="_blank">
+                <i class="fas fa-print bambu"></i>
+                拓竹
+            </a>
+        </div>
+        <p class="sponsor">
+            如果这个项目对您有帮助，欢迎
+            <a href="/contact.html" >赞助我一杯咖啡 ☕</a>
+        </p>
+    </div>
+</body>
+</html>

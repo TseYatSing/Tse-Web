@@ -5,6 +5,73 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>tse个人网站</title>
     <link rel="stylesheet" href="styles.css">
+        <style>
+        /* 新增赞助页面专属样式 */
+        .donate-section {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 2rem;
+            background: #fff8f0;
+            border-radius: 15px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        .coffee-animation {
+            font-size: 3rem;
+            margin: 1rem 0;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        .qrcode-container {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin: 2rem 0;
+            flex-wrap: wrap;
+        }
+
+        .qrcode-item {
+            background: white;
+            padding: 1rem;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+
+        .qrcode-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .qrcode-item img {
+            width: 200px;
+            height: 200px;
+            margin-bottom: 0.5rem;
+        }
+
+        .support-text {
+            color: #666;
+            line-height: 1.8;
+            margin: 1.5rem 0;
+        }
+
+        .highlight {
+            color: #ff6b35;
+            font-weight: 500;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        @media (max-width: 768px) {
+            .qrcode-item img {
+                width: 150px;
+                height: 150px;
+            }
+        }
+    </style>
 </head>
 <body>
     <!-- 顶部导航栏 -->
@@ -13,10 +80,10 @@
             <a href="#" class="navbar-brand"> T . S . E . </a>
             <nav class="navbar-nav">
                 <ul>
-                    <li><a href="index.html">首页</a></li>
-                    <li><a href="about.html">关于我</a></li>
-                    <li><a href="projects.html">项目</a></li>
-                    <li><a href="contact.html">联系</a></li>
+                    <li><a href="/index.html">首页</a></li>
+                    <li><a href="/about.html">关于我</a></li>
+                    <li><a href="/html/projects/projects_hardware.html">项目</a></li>
+                    <li><a href="/contact.html">联系</a></li>
                 </ul>
             </nav>
         </div>
@@ -24,11 +91,44 @@
  
     <!-- 主内容区域 -->
     <main class="container">
-        <section id="home" class="section">
-            <h1>联系</h1>
-            <p>这是我的个人网站的主页。</p>
+        <section class="section donate-section">
+            <div class="coffee-animation">☕️</div>
+            <h1>请TSE喝杯创意咖啡</h1>
+            
+            <p class="support-text">
+                每一个项目都像一杯精心调制的咖啡，需要<span class="highlight">热情</span>、<span class="highlight">时间</span>和<span class="highlight">专注</span>。<br>
+                如果我的作品带给您灵感或帮助，欢迎通过扫码支持我的创作！
+            </p>
+
+            <div class="qrcode-container">
+                <div class="qrcode-item">
+                    <img src="/img/alipay-qrcode.jpg" alt="支付宝赞助二维码">
+                    <p>支付宝扫码支持</p>
+                </div>
+                <div class="qrcode-item">
+                    <img src="/img/wechat-qrcode.jpg" alt="微信赞助二维码">
+                    <p>微信扫码支持</p>
+                </div>
+            </div>
+
+            <p class="support-text">
+                每一份支持都将用于：<br>
+                🛠️ 购买开发材料 &nbsp;&nbsp; 📚 技术书籍订阅 &nbsp;&nbsp; ☕️ 保持创作活力<br>
+                支持后可添加微信备注，将加入特别鸣谢列表！
+            </p>
         </section>
 
+        <!-- 保留原有联系信息 -->
+        <section id="contact" class="section">
+            <h2>商务合作联系</h2>
+            <p>请说明具体来意</p>
+            <div class="contact-method">
+                <p>微信：zhizhuxia139218</p>
+            </div>
+            <div class="contact-method">
+                <p>QQ：2567174581</p>
+            </div>
+        </section>
     </main>
  
     <!-- 页脚（可选） -->
